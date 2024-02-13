@@ -10,6 +10,10 @@ const ChangePassword = ({ user }) => {
 
   const handleChangePassword = async (e) => {
     e.preventDefault();
+    if (!currentPassword || !newPassword || !confirmNewPassword) {
+      setMessage("Please enter all the fields");
+      return;
+    }
     if (newPassword !== confirmNewPassword) {
       setMessage("New passwords do not match");
       return;
@@ -83,7 +87,7 @@ const ChangePassword = ({ user }) => {
             Change Password
           </button>
         </form>
-        {message && <p>{message}</p>}
+        {message && <p style={{color:"red"}}>{message}</p>}
       </div>
     </>
   );
