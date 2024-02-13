@@ -106,6 +106,7 @@ const Login = ({ setToken, setUser }) => {
             </button>
           )}
         </form>
+        <p style={{cursor:"pointer"}} onClick={()=> navigate("/")}>Sign Up</p>
         {submitted && loginStatus === "failed" && (
           <div className="login-error">
             Invalid email or password. Please try again.

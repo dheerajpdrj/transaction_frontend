@@ -138,6 +138,7 @@ const Register = () => {
             </button>
           )}
         </form>
+        <p style={{cursor:"pointer"}} onClick={()=> navigate("/login")}>Already a costomer</p>
         {submitted && registrationStatus === "success" && (
           <div className="register-success">
             Registration successful. Redirecting to login page...
